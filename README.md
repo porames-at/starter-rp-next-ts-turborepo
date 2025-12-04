@@ -16,7 +16,7 @@ Welcome to the React PDF Starter Toolkit! This repository provides a comprehensi
 1. **Clone the Repository**: If you haven't already, clone the repository and navigate into the project directory.
 
    ```bash
-   git clone https://github.com/reactpdf/starter-rp-next-ts-turborepo.git
+   git clone https://github.com/react-pdf-dev/starter-rp-next-ts-turborepo.git
    cd starter-rp-next-ts-turborepo
    ```
 
