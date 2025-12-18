@@ -78,7 +78,8 @@ const AppPdfViewer = (props: Props) => {
 
 	return (
 		<RPProvider
-			src="https://cdn.codewithmosh.com/image/upload/v1721763853/guides/web-roadmap.pdf"
+			src="https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf
+			"
 			{...providerProps}>
 			{showToolbar ? (
 				<RPDefaultLayout {...defaultLayoutProps}>
@@ -157,22 +158,48 @@ export default function RootLayout({
 6. **Use the LazyAppPdfViewer component in page**: Add the React PDF component to your page
 
 ```jsx
+
 import { LazyAppPdfViewer } from "./components/LazyAppPdfViewer";
 
 export default function Home() {
 	return (
-		<div className="w-[1028px] h-[700px] mx-auto">
-			<h1>RP Starter Toolkit: Nextjs + Javascript</h1>
-			<br />
-			<h2>Default Toolbar</h2>
-			<LazyAppPdfViewer />
-			<h2>Without Toolbar</h2>
-			<LazyAppPdfViewer showToolbar={false} />
-			<h2>Mobile</h2>
-			<LazyAppPdfViewer defaultLayoutProps={{ style: { width: "500px" } }} />
-		</div>
+		<>
+			<div
+				style={{
+					width: "1024px",
+					margin: "0 auto",
+				}}>
+				<h1>RP Starter Toolkit: Nextjs + Typescript in Turborepo</h1>
+				<br />
+				<h2>Default Toolbar</h2>
+				<LazyAppPdfViewer
+					providerProps={{
+						src: `https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf`,
+						initialPage: 1,
+					}}
+					defaultLayoutProps={{ style: { width: "100%", height: "600px" } }}
+				/>
+				<br />
+				<h2>Without Toolbar</h2>
+				<LazyAppPdfViewer
+					showToolbar={false}
+					providerProps={{
+						src: `https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf`,
+						initialPage: 1,
+					}}
+				/>
+				<br />
+				<h2>Mobile</h2>
+				<LazyAppPdfViewer
+					defaultLayoutProps={{
+						style: { width: "500px", margin: "0 auto" },
+					}}
+				/>
+			</div>
+		</>
 	);
 }
+
 ```
 
 ## Examples
