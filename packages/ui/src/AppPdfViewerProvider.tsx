@@ -9,5 +9,3 @@ function AppPdfViewerProvider({
 	return <RPConfig {...props}>{children}</RPConfig>;
 }
 export default AppPdfViewerProvider;
-
-export type { RPConfigProps };
