@@ -31,7 +31,7 @@ export default function Home() {
 				<h2>Mobile</h2>
 				<LazyAppPdfViewer
 					defaultLayoutProps={{
-						style: { width: "500px", margin: "0 auto" },
+						style: { width: "500px"},
 					}}
 				/>
 			</div>
